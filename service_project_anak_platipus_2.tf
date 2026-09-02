@@ -26,7 +26,7 @@ resource "google_compute_shared_vpc_service_project" "service_2" {
 }
 
 # 3. Provision dedicated GCS state bucket
-module "service_state_bucket" {
+module "service_state_bucket_2" {
   source      = "git::https://github.com/tribagus6/tf-gcp-module.git//modules/backend"
   project_id  = "anak-platipus-2"
   bucket_name = "anak-platipus-2-tfstate"
