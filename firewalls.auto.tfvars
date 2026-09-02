@@ -18,5 +18,15 @@ firewall_rules = {
       protocol = "icmp"
       ports    = []
     }]
+  },
+  "allow-atlantis-webhook" = {
+    direction     = "INGRESS"
+    priority      = 1000
+    source_ranges = ["0.0.0.0/0"]
+    target_tags   = []
+    allow = [{
+      protocol = "tcp"
+      ports    = ["4141"]
+    }]
   }
 }
